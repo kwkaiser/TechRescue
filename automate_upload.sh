@@ -8,15 +8,18 @@ if [ ! -d "/mnt/share" ]; then
     mkdir -v /mnt/share
 fi
 
-# Mount the share file to the aforementioned folder
-mount -t cifs -o password=$PASSWORD,username=$USERNAME //$ADDRESS /mnt/share
-
 # Execute buildscript
-exec ttbuild.sh
+sh ttbuild.sh
+
+# Mount the share file to the aforementioned folder
+mount -t cifs -o password=$PASS,username=$USERNAME,vers=1.0 //netfiles00.uvm.edu/CDCshare /mnt/share
 
 # Move output of buildscript to relevant folder in CDCshare
-# mv stuff to wherever
+pv out/* > /mnt/share/TechRescue/techrescue.iso
 
 # Unmount share folder from /mnt/share
+umount /mnt/share
 
-
+# Clean up / delete itself
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+rm -rf $DIR
