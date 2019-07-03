@@ -15,7 +15,9 @@ export time_passed=$(datediff -i '%Y%m%d%H%M%S' -f '%S' $date1 $date2)
 
 # If the automate_upload.sh script hadn't been run in the past 7 days, run it.
 if [$time_passed -gt 604800];
-    git clone https://github.com/kwkaiser/TechRescue.git ~/Desktop/TechRescue
+    git clone https://github.com/kwkaiser/TechRescue.git ~/Documents/TechRescue
+    sed -i 's/"$USERNAME"/"putnamehere"/g' ~/Documents/TechRescue/automate_upload.sh
+    sed -i 's/"$PASSWORD"/"[putpasshere]"/g' ~/Documents/TechRescue/automate_upload.sh
     sh ~/Desktop/TechRescue/automate_upload.sh
 fi
 

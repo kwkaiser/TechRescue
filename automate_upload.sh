@@ -15,7 +15,7 @@ sh ttbuild.sh
 mount -t cifs -o password=$PASS,username=$USERNAME,vers=1.0 //netfiles00.uvm.edu/CDCshare /mnt/share
 
 # Move output of buildscript to relevant folder in CDCshare
-pv out/* > /mnt/share/TechRescue/techrescue.iso
+pv out/sys* > /mnt/share/TechRescue/techrescue.iso
 
 # Unmount share folder from /mnt/share
 umount /mnt/share

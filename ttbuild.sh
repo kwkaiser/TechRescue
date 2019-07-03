@@ -17,6 +17,7 @@ rm sysresccd-src/packages.x86_64
 cp packages.x86_64 sysresccd-src/packages.x86_64
 
 # Make system level modifications to /etc/
+cp .bashrc sysresccd-src/airootfs/etc/.bashrc
 cp sudoers sysresccd-src/airootfs/etc/sudoers
 cp -r NetworkManager sysresccd-src/airootfs/etc/NetworkManager
 cp -r lightdm sysresccd-src/airootfs/etc/lightdm
