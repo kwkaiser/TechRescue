@@ -16,4 +16,3 @@ echo "Enter the password of the account for the share drive"
 read NEWP
 sed -i "s/NEWP/$NEWP/g" anacron_script.sh
 
-echo "Now enter the updated credentials for the relevant servershare to the automate_upload.sh script"
