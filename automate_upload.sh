@@ -19,7 +19,3 @@ pv out/sys* > /mnt/share/TechRescue/techrescue.iso
 
 # Unmount share folder from /mnt/share
 umount /mnt/share
-
-# Clean up / delete itself
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-rm -rf $DIR
