@@ -14,6 +14,3 @@ notify-send "Tech Rescue build finished"
 
 # Remove remaining files  & cleanup
 rm -rf /home/USER/TechRescue/
-rm -rf /home/USER/out/
-rm -rf /home/USER/sysresccd-src
-rm -rf /home/USER/work/

@@ -3,19 +3,22 @@
 # Written by Karl Kaiser 06/25/2019
 # Last updated by Karl Kaiser 06/25/2019
 
+# Set working directory
+cd "$(dirname "$0")"
+
 # Check if the a share file folder exists. If not; create one
 if [ ! -d "/mnt/share" ]; then
     mkdir -v /mnt/share
 fi
 
 # Execute buildscript
-sh /home/USER/TechRescue/ttbuild.sh
+sh ttbuild.sh
 
 # Mount the share file to the aforementioned folder
 mount -t cifs -o password=$PASS,username=$USERNAME,vers=1.0 //netfiles00.uvm.edu/CDCshare /mnt/share
 
 # Move output of buildscript to relevant folder in CDCshare
-pv /home/USER/out/sys* > /mnt/share/TechRescue/techrescue.iso
+pv out/sys* > /mnt/share/TechRescue/techrescue.iso
 
 # Unmount share folder from /mnt/share
 umount /mnt/share
