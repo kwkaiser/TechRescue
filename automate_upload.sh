@@ -9,7 +9,7 @@ if [ ! -d "/mnt/share" ]; then
 fi
 
 # Execute buildscript
-sh ttbuild.sh
+sh /home/arwen/Documents/TechRescue/ttbuild.sh
 
 # Mount the share file to the aforementioned folder
 mount -t cifs -o password=$PASS,username=$USERNAME,vers=1.0 //netfiles00.uvm.edu/CDCshare /mnt/share
