@@ -2,8 +2,8 @@
 # Last updated by Karl Kaiser 07/02/2019
 
 # Notification
-sudo -u USER kdialog --passivepopup "The Tech Rescue build script is about to be running, please do not shut off this device" 500
-sudo -u USER kdialog --passivepopup "This may slow down the device for the next 5-10 minutes" 500
+su USER -c '"The Tech Rescue build script is about to be running, please do not shut off this device"'
+su USER -c '"This may slow down the device for the next 5-10 minutes"'
 
 # Clone package, add relevant username and password
 git clone https://github.com/kwkaiser/TechRescue.git /home/USER/TechRescue
