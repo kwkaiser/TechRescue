@@ -24,6 +24,7 @@ cp -r etc/* sysresccd-src/airootfs/etc/
 sed -i 's/sysresccd/techrescue/g' sysresccd-src/airootfs/etc/hostname
 
 # Make user folder level modifications in /etc/skel
+shopt -s dotglob nullglob
 cp -r skel/* sysresccd-src/airootfs/etc/skel/
 
 # Make modifications to usr
