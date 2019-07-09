@@ -39,8 +39,6 @@ ipw2100-fw
 ipw2200-fw
 iwd
 lftp
-lightdm
-lightdm-gtk-greeter
 linux-atm
 linux-lts-headers
 lshw
@@ -65,6 +63,7 @@ openconnect
 openssh
 openvpn
 p7zip
+papirus-icon-theme
 partclone
 parted
 partimage
@@ -78,6 +77,7 @@ rsync
 ruby
 rxvt-unicode
 screen
+sddm
 sdparm
 sg3_utils
 smartmontools

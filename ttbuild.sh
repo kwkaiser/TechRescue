@@ -20,19 +20,18 @@ rm sysresccd-src/packages.x86_64
 cp packages.x86_64 sysresccd-src/packages.x86_64
 
 # Make system level modifications to /etc/
-cp sudoers sysresccd-src/airootfs/etc/sudoers
-cp -r NetworkManager sysresccd-src/airootfs/etc/NetworkManager
-cp -r lightdm sysresccd-src/airootfs/etc/lightdm
+cp -r etc/* sysresccd-src/airootfs/etc/
 sed -i 's/sysresccd/techrescue/g' sysresccd-src/airootfs/etc/hostname
 
 # Make user folder level modifications in /etc/skel
-cp .Xresources sysresccd-src/airootfs/etc/skel/.Xresources
-cp -r .config sysresccd-src/airootfs/etc/skel/.config
+cp -r skel/* sysresccd-src/airootfs/etc/skel/
 
-# Copy background photos into /usr/share
+# Make modifications to usr
 mkdir -pv sysresccd-src/airootfs/usr/share/
-cp -r bgphotos/ sysresccd-src/airootfs/usr/share/bgphotos/
-cp -r applications/ sysresccd-src/airootfs/usr/share/applications
+mkdir -pv sysresccd-src/airootfs/usr/share/sddm/themes
+cp -r usr/bgphotos/ sysresccd-src/airootfs/usr/share/bgphotos/
+cp -r usr/applications/ sysresccd-src/airootfs/usr/share/applications
+git clone https://github.com/MarianArlt/sddm-sugar-light.git sysresccd-src/airootfs/usr/share/sddm/themes/sugar-light
 
 # Initial root commands:
 cat >> sysresccd-src/airootfs/root/customize_airootfs.sh <<\EOF
@@ -41,7 +40,7 @@ cat >> sysresccd-src/airootfs/root/customize_airootfs.sh <<\EOF
 #
 
 # Systemctl modifications
-systemctl enable lightdm.service
+systemctl enable sddm.service
 systemctl enable NetworkManager
 systemctl set-default graphical.target
 
