@@ -15,8 +15,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=ttls;
-identity=$IDENTITY
-password=$PASSWORD
+identity=$WIFIUSR
+password=$WIFIPASS
 phase2-auth=mschapv2
 
 [ipv4]
