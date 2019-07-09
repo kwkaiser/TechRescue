@@ -1,8 +1,8 @@
 [connection]
 id=UVM
-uuid=6efe2845-fff7-4fcc-afef-894d1fd30cd7
+uuid=4c6e26a4-d5d7-4756-9a8c-3fb1b51f2309
 type=wifi
-permissions=user:kwkaiser:;
+permissions=user:clinic:;
 
 [wifi]
 mac-address-blacklist=
