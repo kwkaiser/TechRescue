@@ -11,6 +11,10 @@ git clone https://github.com/kwkaiser/TechRescue.git /home/USER/TechRescue
 sed -i 's/$USR/NEWU/g' /home/USER/TechRescue/automate_upload.sh
 sed -i 's/$PASSWORD/NEWP/g' /home/USER/TechRescue/automate_upload.sh
 
+# Set wifi name and password
+sed -i 's/$WIFIUSR/NEW_WIFI_USR/g' /home/USER/TechRescue/NetworkManager/system-connections/UVM.nmconnection
+sed -i 's/$WIFIPASS/NEW_WIFI_PASS/g' /home/USER/TechRescue/NetworkManager/system-connections/UVM.nmconnection
+
 # Notify user and build
 sh /home/USER/TechRescue/automate_upload.sh
 
