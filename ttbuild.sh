@@ -26,6 +26,7 @@ sed -i 's/sysresccd/techrescue/g' sysresccd-src/airootfs/etc/hostname
 # Make user folder level modifications in /etc/skel
 shopt -s dotglob nullglob
 cp -r skel/* sysresccd-src/airootfs/etc/skel/
+git clone https://github.com/addy-dclxvi/openbox-theme-collections.git skel/.themes/
 
 # Make modifications to usr
 mkdir -pv sysresccd-src/airootfs/usr/share/
@@ -33,6 +34,7 @@ mkdir -pv sysresccd-src/airootfs/usr/share/sddm/themes
 cp -r usr/bgphotos/ sysresccd-src/airootfs/usr/share/bgphotos/
 cp -r usr/applications/ sysresccd-src/airootfs/usr/share/applications
 git clone https://github.com/MarianArlt/sddm-sugar-light.git sysresccd-src/airootfs/usr/share/sddm/themes/sugar-light
+
 
 # Initial root commands:
 cat >> sysresccd-src/airootfs/root/customize_airootfs.sh <<\EOF
