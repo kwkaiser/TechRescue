@@ -26,7 +26,6 @@ sed -i 's/sysresccd/techrescue/g' sysresccd-src/airootfs/etc/hostname
 # Make user folder level modifications in /etc/skel
 shopt -s dotglob nullglob
 cp -r skel/* sysresccd-src/airootfs/etc/skel/
-git clone https://github.com/addy-dclxvi/openbox-theme-collections.git skel/.themes/
 
 # Make modifications to usr
 mkdir -pv sysresccd-src/airootfs/usr/share/
