@@ -56,6 +56,19 @@ mkdir /mnt/source
 mkdir /mnt/windows
 mkdir /mnt/macos
 
+# Run network setup
+export WFDEV=$(iw dev | awk '$1=="Interface"{print $2}')
+
+nmcli con add type wifi ifname $WFDEV con-name University ssid UVM \
+ipv4.method auto \
+802-1x.eap peap \
+802-1x.phase2-auth mschapv2 \
+802-1x.identity $WIFIUSR \
+802-1x.password $WIFIPASS \
+wifi-sec.key-mgmt wpa-eap
+
+nmcli con up University 
+
 #
 # END OF TECH TEAM MODIFICATIONS
 #
