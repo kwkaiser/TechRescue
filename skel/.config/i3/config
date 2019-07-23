@@ -37,6 +37,7 @@ gaps inner 10
 exec --no-startup-id tint2
 exec --no-startup-id nm-applet
 
+
 # --------------------[DEFAULT PAGE CONFIG]--------------------
 exec --no-startup-id firefox -new-tab -url https://uvm.edu/~helpline -new-tab -url https://www.uvm.edu/it/kb/
 

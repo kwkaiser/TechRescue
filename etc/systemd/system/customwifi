@@ -1,0 +1,8 @@
+[Unit]
+Description=Script to connect to a custom WPA2 enterprise network
+
+[Service]
+ExecStat=/usr/local/bin/customwifi
+
+[Install]
+WantedBy=multi-user.target
