@@ -15,8 +15,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=ttls;
-identity=techwifi
-password=Techs Are Us 2019!
+identity=$WIFIUSR
+password=$WIFIPASS
 phase2-auth=mschapv2
 
 [ipv4]

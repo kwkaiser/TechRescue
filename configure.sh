@@ -27,5 +27,5 @@ sed -i "s/NEWP/$NEWP/g" anacron_script.sh
 # Move anacron script to sbin, add item to anacrontab
 cp anacron_script.sh /usr/loca/sbin/anacron_script
 echo "#Tech Rescue" >> /etc/anacrontab
-echo "7 30 techrescue_build sh /usr/loca/sbin/anacron_script" >> /etc/anacrontab
+echo "7 30 techrescue_build sh /usr/local/sbin/anacron_script" >> /etc/anacrontab
 
