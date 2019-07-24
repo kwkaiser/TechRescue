@@ -59,6 +59,7 @@ mkdir /mnt/macos
 
 # Enable networking
 chmod +x /usr/local/bin/customwifi
+systemctl enable customwifi.service
 systemctl start customwifi.service
 
 #
