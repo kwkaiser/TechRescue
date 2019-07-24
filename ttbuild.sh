@@ -32,6 +32,7 @@ mkdir -pv sysresccd-src/airootfs/usr/share/
 mkdir -pv sysresccd-src/airootfs/usr/share/sddm/themes
 cp -r usr/bgphotos/ sysresccd-src/airootfs/usr/share/bgphotos/
 cp -r usr/applications/ sysresccd-src/airootfs/usr/share/applications
+cp -r usr/local sysresccd-src/airootfs/usr/local
 git clone https://github.com/MarianArlt/sddm-sugar-light.git sysresccd-src/airootfs/usr/share/sddm/themes/sugar-light
 
 
@@ -57,6 +58,7 @@ mkdir /mnt/windows
 mkdir /mnt/macos
 
 # Enable networking
+chmod +x /usr/local/bin/customwifi
 systemctl start customwifi.service
 
 #
