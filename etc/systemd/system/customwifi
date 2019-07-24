@@ -6,3 +6,7 @@ ExecStat=/usr/local/bin/customwifi
 
 [Install]
 WantedBy=multi-user.target
+RequiredBy=
+Alias=
+Also=
+DefaultInstance=
