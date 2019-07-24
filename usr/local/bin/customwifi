@@ -1,5 +1,7 @@
 !#/bin/bash
 
+
+export histchars=
 nmcli con add type wifi ifname $WFDEV con-name University ssid UVM \
 ipv4.method auto \ 
 802-1x.eap peap \
