@@ -1,8 +1,8 @@
 [Unit]
-Description=Custom wifi unit
+Description=Script to connect to a custom WPA2 enterprise network
 
 [Service]
-Type=oneshot
-ExecStart=/bin/bash /usr/local/bin/customwifi
+ExecStat=/usr/local/bin/customwifi
 
 [Install]
+WantedBy=multi-user.target
