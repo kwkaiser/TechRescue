@@ -1,5 +1,7 @@
 [Unit]
 Description=Script to automatically connect to a WPA2 network with details configured by the ./configure script in the TechRescue package.
+After=NetworkManager.service
+Requires=NetworkManager.service
 
 [Service]
 Type=oneshot
