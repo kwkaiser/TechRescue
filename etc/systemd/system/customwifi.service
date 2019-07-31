@@ -1,8 +1,9 @@
 [Unit]
-Description=Script to connect to a custom WPA2 enterprise network
+Description=Script to automatically connect to a WPA2 network with details configured by the ./configure script in the TechRescue package.
 
 [Service]
-ExecStat=/usr/local/bin/customwifi
+Type=oneshot
+ExecStart=/bin/bash /usr/local/bin/customwifi
 
 [Install]
 WantedBy=multi-user.target
